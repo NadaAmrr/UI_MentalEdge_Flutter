@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mentaledge_ui/pages/home.dart';
+import 'package:mentaledge_ui/pages/other/product_screen.dart';
 import 'package:mentaledge_ui/pages/other/splash_screen.dart';
 
 void main() {
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: false,
       ),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SplashScreen.routeName: (context) => const SplashScreen(),
+        ProductScreen.routeName: (context) => const ProductScreen(),
       },
     );
   }

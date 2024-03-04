@@ -8,11 +8,16 @@ class Constants {
   static const String svgPath = "assets/svg";
   static const Color bgPrimaryColor = Color(0xffffffff);
   static const Color bgSecColor = Color(0xff37715B);
+  static const Color bgMainColor = Color(0xff459173);
   static const Color bgAccentColor = Color(0xffFFE3B8);
+  static const Color bgGreyColor = Color(0xffF9F9F9);
+  static const Color greyColor = Color(0xffF4F4F4);
+  static const Color icUnSelectColor = Color(0xffF4F4F4);
   ///
-  static const Color primaryTxtColor = Color(0xffffffff);
-  static const Color secTxtColor = Color(0xffE2E2E2);
-  static const Color infoTxtColor = Color(0xff459173);
+  static const Color txtPrimaryColor = Color(0xffffffff);
+  static const Color txtSecColor = Color(0xffE2E2E2);
+  static const Color txtGreyColor = Color(0xff808080);
+  static const Color txtInfoColor = Color(0xff459173);
   /// Font
   static const String fontFamily = "DM Sans";
   static const FontWeight light = FontWeight.w300;

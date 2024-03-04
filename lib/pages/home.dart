@@ -1,52 +1,75 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mentaledge_ui/pages/tabs/main_tab.dart';
+import 'package:mentaledge_ui/utils/constants.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   static const String routeName = 'home';
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int index = 0;
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          ///title
-          Row(
-            children: [
-              Text("Hi"),
-              Text("Dr.kellen"),
-            ],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
           ),
-          ///subtitle
-          Text("You have 4 appoinments today."),
-          ///Head
-          Text("tHOUGHT OF THE DAY"),
-          ///Container
-          Container(
-            child: Wrap(children:[
-              Text("Where there is a human being there is an"),
-              Text("read more........"),
-            ]),
+          height: 90,
+          margin: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+                backgroundColor: Constants.bgMainColor,
+                unselectedItemColor: Constants.icUnSelectColor,
+                selectedItemColor: Constants.bgSecColor,
+                currentIndex: index,
+                onTap: (value) {
+                  index = value;
+                  setState(() {});
+                },
+                showUnselectedLabels: false,
+                showSelectedLabels: false,
+                items: [
+                  BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        '${Constants.svgPath}/ic_home.svg',
+                      ),
+                      label: ""),
+                  BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        '${Constants.svgPath}/ic_calender.svg',
+                      ),
+                      label: ""),
+                  BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        '${Constants.svgPath}/ic_bag.svg',
+                      ),
+                      label: ""),
+                  BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        '${Constants.svgPath}/ic_chat.svg',
+                      ),
+                      label: ""),
+                ]),
           ),
-          ///title of list
-          Text("Upcoming sessions"),
-          ///Listview
-          ListTile(
-            // leading: Image.asset("assets/images/person3.png"),
-            title: Text("Jack Holly"),
-            subtitle: Text("20 Years old , depression"),
-            trailing: Column( // Wrap your content in a Column
-              crossAxisAlignment: CrossAxisAlignment.end, // Align content to the end
-              children: <Widget>[
-                Text('Content 1'),
-                Text('Content 2'),
-                // Add more widgets as needed
-              ],
-            ),
-          )
-        ],
+        ),
+        body: tabs[index],
       ),
     );
   }
+  List<Widget> tabs = [
+    MainTab(),
+    MainTab(),
+    MainTab(),
+    MainTab(),
+  ];
 }

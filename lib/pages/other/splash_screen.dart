@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
                     "Mental Edge",
                     style: TextStyle(
                       fontFamily: Constants.fontFamily,
-                      color: Constants.primaryTxtColor,
+                      color: Constants.txtPrimaryColor,
                       fontWeight: Constants.bold,
                       fontSize: Constants.s37,
                     ),
@@ -45,7 +45,7 @@ class SplashScreen extends StatelessWidget {
                     "Healthy life is having a healthy mind so build a healthy mind then the healthy body.",
                     style: TextStyle(
                       fontFamily: Constants.fontFamily,
-                      color: Constants.secTxtColor,
+                      color: Constants.txtSecColor,
                       fontWeight: Constants.regular,
                       fontSize: Constants.s16,
                     ),
@@ -83,7 +83,7 @@ class SplashScreen extends StatelessWidget {
                       decoration: TextDecoration.underline,
                       fontWeight: Constants.regular,
                       fontSize: Constants.s16,
-                      color: Constants.primaryTxtColor,
+                      color: Constants.txtPrimaryColor,
                     ),
                   ),
                 ],
