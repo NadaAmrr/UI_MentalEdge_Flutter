@@ -1,16 +1,11 @@
+
 # mentaledge_ui
 
 A new Flutter project.
 
-## Getting Started
+https://github.com/NadaAmrr/UI_MentalEdge_Flutter/assets/115532651/6701302a-27d0-42f4-b16e-0963a6244753
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
