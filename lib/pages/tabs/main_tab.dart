@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mentaledge_ui/pages/other/product_screen.dart';
 import 'package:mentaledge_ui/utils/constants.dart';
 import 'package:mentaledge_ui/widgets/session_widget.dart';
 
@@ -116,6 +117,7 @@ class MainTab extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
+
           ///Container
           Stack(
             children: [
@@ -168,6 +170,7 @@ class MainTab extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+
           ///title of list
           Text(
             "Upcoming sessions",
@@ -177,18 +180,25 @@ class MainTab extends StatelessWidget {
               fontWeight: Constants.medium,
             ),
           ),
-          // SizedBox(
-          //   height: 20,
-          // ),
+          SizedBox(
+            height: 20,
+          ),
           ///Listview
           Expanded(
             child: ListView.separated(
               itemBuilder: (context, index) {
-                return SessionWidget();
+                return InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(ProductScreen.routeName);
+                    },
+                    child: SessionWidget());
               },
-              itemCount: 4, separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(height: 12,);
-            },
+              itemCount: 4,
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(
+                  height: 12,
+                );
+              },
             ),
           ),
         ],
